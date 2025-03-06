@@ -1,0 +1,27 @@
+{
+  "name": "notesapp",
+  "version": "1.0.0",
+  "description": "A lightweight note-taking application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^29.0.0",
+    "electron-store": "^8.1.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "productName": "NotesApp",
+    "appId": "com.example.notesapp",
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A lightweight, user-friendly note-taking application for Windows">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Notes App</h1>
+            <div class="controls">
+                <input 
+                    type="text" 
+                    id="search" 
+                    placeholder="Search notes..." 
+                    aria-label="Search notes"
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+                <button 
+                    id="toggle-dark-mode" 
+                    aria-label="Toggle dark mode"
+                    title="Toggle dark/light mode"
+                >🌙</button>
+            </div>
+        </header>
+
+        <form class="note-form" onsubmit="return false;">
+            <textarea 
+                id="note-content" 
+                placeholder="Write your note here..."
+                aria-label="Note content"
+                minlength="1"
+                maxlength="2000"
+                required
+                spellcheck="true"
+                autocomplete="off"
+            ></textarea>
+            <button 
+                type="submit" 
+                id="save-note"
+                aria-label="Save note"
+            >Save Note</button>
+        </form>
+
+        <section class="notes-list" aria-labelledby="notes-heading">
+            <h2 id="notes-heading">Your Notes</h2>
+            <div id="notes-container" role="list">
+                <!-- Notes will be dynamically inserted here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
